@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Note_Mobile_Application</string>
+    <string name="save_button_description">Add Note</string>
+    <string name="enter_title_hint">Enter title</string>
+    <string name="enter_content_hint">Enter description</string>
+    <string name="add_note_heading">add not hedding</string>
 </resources>

@@ -5,18 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".AddNoteActivity">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/addNoteHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alongParentTop="true"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="Add note."
+        android:text="@string/add_note_heading"
         android:textColor="@color/orange"
         android:textSize="24sp" />
 
@@ -27,31 +25,34 @@
         android:src="@drawable/baseline_thumb_up_24"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="@id/addNoteHeading"
-        android:layout_marginEnd="6dp"/>
+        android:layout_marginEnd="6dp"
+        android:contentDescription="@string/save_button_description" />
 
     <EditText
         android:id="@+id/titleEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:hint="Enter the title of the note."
+        android:hint="@string/enter_title_hint"
         android:padding="12dp"
         android:textSize="20sp"
         android:layout_below="@+id/addNoteHeading"
         android:layout_marginTop="16dp"
         android:maxLines="1"
-        android:fontFamily="@font/poppins"/>
+        android:fontFamily="@font/poppins"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/contentEditText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Enter the description of the note."
+        android:hint="@string/enter_content_hint"
         android:gravity="top"
         android:padding="12dp"
         android:textSize="18sp"
         android:fontFamily="@font/poppins"
         android:background="@drawable/orange_border"
         android:layout_below="@id/titleEditText"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:inputType="textMultiLine" />
 
 </RelativeLayout>
