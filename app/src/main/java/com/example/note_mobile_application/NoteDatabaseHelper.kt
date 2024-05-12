@@ -36,4 +36,23 @@ class NoteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         db.insert(TABLE_NAME, null, values)
         db.close()
     }
+
+    fun getAllNotes(): List<Note> {
+        val notesList = mutableListOf<Note>()
+        val db = readableDatabase
+        val query = "SELECT * FROM $TABLE_NAME"
+        val cursor = db.rawQuery(query, null)
+
+        while (cursor.moveToNext()){
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUM_ID))
+            val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITEL))
+            val context = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CONTENT))
+
+            val note = Note(id, title, context)
+            notesList.add(note)
+        }
+        cursor.close()
+        db.close()
+        return notesList
+    }
 }
