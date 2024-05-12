@@ -4,4 +4,5 @@
     <string name="enter_title_hint">Enter title</string>
     <string name="enter_content_hint">Enter description</string>
     <string name="add_note_heading">add not hedding</string>
+    <string name="edit_note">Edit note</string>
 </resources>
